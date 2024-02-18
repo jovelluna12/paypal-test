@@ -25,8 +25,8 @@ window.paypal
         });
         const orderData = await response.json();
 
-        if (orderData.id) {
-          return orderData.id;
+        if (orderData.jsonResponse.id) {
+          return orderData.jsonResponse.id;
         } else {
           const errorDetail = orderData?.details?.[0];
           const errorMessage = errorDetail
